@@ -32,20 +32,24 @@ This script completely removes all Microsoft applications and components from yo
 
 Irreversible: after running the script, all Microsoft applications and data will be permanently deleted. Files in iCloud/OneDrive remain in the cloud, but local copies are erased.
 
-Backup: it is strongly recommended to create a Time Machine backup before proceeding.
+### 💾 Backup recommendation
+The script is designed to work correctly and is safe to use, but as with any system modification, we recommend having a backup just in case. Creating a Time Machine backup beforehand ensures you can restore your system if something unexpected happens.
 
-Microsoft Defender quirk: the script attempts to remove Microsoft Defender.app, but sometimes a stub application remains (clicking it opens a browser). If after reboot the Defender icon still appears in the Applications folder, delete it manually (drag to Trash) or use AppCleaner to find and remove any leftover files. The script already covers the main Defender files, but manual intervention may be needed for the stub.
+### 🔑 Microsoft office licenses
+The script removes all Microsoft license files and keychain entries. This ensures that after running it, your system has no traces of previous Microsoft software, allowing for a completely fresh installation if you choose to reinstall later.
 
-Licenses: yes, the script deletes all license files and keychain entries, so you will have a completely fresh state for any future Microsoft software installation.
+### 💻 Compatibility
+tested on macOS Ventura, Sonoma, Sequoia (both Apple Silicon and Intel).
 
-Compatibility: tested on macOS Ventura, Sonoma, Sequoia (both Apple Silicon and Intel).
+### 🛡️ Microsoft Defender quirk
+Microsoft Defender quirk: the script attempts to remove Microsoft Defender.app, but sometimes application remains. If after reboot the Defender icon still appears in the Applications folder, use [AppCleaner](freemacsoft.net/appcleaner) to find and remove any leftover files. The script already covers the main Defender files, but manual intervention may be needed for the stub.
 
 ## ❓ Why might Defender remain? / What to do if Defender doesn't get removed?
 
-Why might Defender remain?
+### Why might Defender remain?
 Even after running the main script, some associated files of Microsoft Defender can be left behind because they are stored in multiple protected system folders. A standard removal script might not catch all of them.
 
-What to do if Defender doesn't get removed?
+### What to do if Defender doesn't get removed?
 We strongly recommend using AppCleaner. It’s a free tool that scans for every file related to an application and removes them completely. Just drag Microsoft Defender.app into AppCleaner, and it will do the rest.
 
 - Download AppCleaner from freemacsoft.net/appcleaner
